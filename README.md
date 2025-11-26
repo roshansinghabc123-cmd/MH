@@ -2,13 +2,13 @@
 
 A global optimization tool for finding the most stable stacking configurations of 2D materials (COFs, Graphene, MOFs) using the Minima Hopping algorithm.
 
-## 📖 Overview
+##  Overview
 
 Finding the optimal way two molecular layers sit on top of each other is difficult. The potential energy surface is rugged, filled with many "local minima" (shallow valleys) where a standard optimizer would get stuck.
 
 This tool uses **Minima Hopping (MH)** to overcome this. It treats the optimization as a physical process where a system "hops" over energy barriers to explore the global landscape, automatically adjusting its "kinetic energy" (jump strength) and "temperature" (acceptance criteria) to avoid getting trapped.
 
-## ⚙️ How It Works (The Logic)
+##  How It Works (The Logic)
 
 The algorithm manipulates **7 parameters** (degrees of freedom) to define the position of the top layer relative to the bottom layer:
 
@@ -26,7 +26,7 @@ We use a modified Minima Hopping approach involving three distinct phases for ev
 2. **The Slide (Local Quench)**: Systematically wiggle the stack to settle into the bottom of the new valley.
 3. **The Decision (Metropolis)**: Decide whether to stay in this new valley or return to the old one.
 
-## 🧠 Code Walkthrough & Key Snippets
+##  Code Walkthrough
 
 Here is how the physical theory maps directly to the Python code in `main.py`.
 
@@ -83,7 +83,7 @@ else:
     ke = min(cfg.mh.ke_max_kj, max(cfg.mh.ke_min_kj, ke * cfg.mh.alpha_down))
 ```
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 
@@ -101,7 +101,7 @@ git clone https://github.com/yourusername/minimahop-stacker.git
 cd minimahop-stacker
 ```
 
-## 🏃 Usage
+##  Usage
 
 **Prepare your Input:**
 Place your monomer structure (single layer) in an `.xyz` file (e.g., `monomer.xyz`).
@@ -135,7 +135,7 @@ The script creates a directory (default: `mh_out`) containing:
 - **`swarm_trace.csv`**: The exact coordinates of every attempt.
 - **`mh_localmin_XX_3layers.xyz`**: The actual 3D structure files for the top discovered minima. You can open these in VESTA, Avogadro, or Ovito.
 
-## 🔧 Advanced Configuration
+##  Advanced Configuration
 
 You can tweak the physics of the "Hiker" in the `MHConfig` class:
 
@@ -147,7 +147,3 @@ class MHConfig:
     alpha_down: float = 0.9   # How much to reduce kick on rejection
     beta_up: float = 1.15     # How much to boost kick on acceptance
 ```
-
-## 📜 License
-
-MIT License
