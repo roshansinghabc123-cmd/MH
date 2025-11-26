@@ -1,0 +1,20 @@
+[
+  {
+    "rank": 1,
+    "objective_kjmol": -99.86072559117443,
+    "angle_degrees": 117.5914264543513,
+    "params": {
+      "cos_like": -0.46316342144287176,
+      "sin_like": 0.886272895352968,
+      "Tx": -3.5085493190744854,
+      "Ty": -0.27984453943470716,
+      "Tz": 3.465721593352572,
+      "Cx": -3.0,
+      "Cy": -0.9419339507919103
+    },
+    "xyz_file": "mh_localmin_01_3layers.xyz",
+    "engine_used": "xtb",
+    "xtb_method": "GFN2-xTB",
+    "method": "minima-hopping"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "input_xyz": "BTA.xyz",
+  "objective_n": 3,
+  "penalty_w": 0.0,
+  "engine": "xtb",
+  "pivot_mode": "centroid",
+  "outdir": "outputs_bta/run_03",
+  "bounds": {
+    "names": ["cos_like", "sin_like", "Tx", "Ty", "Tz", "Cx", "Cy"],
+    "lows": [-1.0, -1.0, -5.0, -5.0, 2.8, -3.0, -3.0],
+    "highs": [1.0, 1.0, 5.0, 5.0, 6.0, 3.0, 3.0]
+  },
+  "pso": {
+    "enabled": true,
+    "particles": 12,
+    "iterations": 30,
+    "omega": 0.7,
+    "c1": 1.6,
+    "c2": 1.6,
+    "seed": 5103
+  },
+  "refine": {
+    "enabled": true,
+    "max_iters": 70,
+    "tol": 0.001,
+    "shrink": 0.5,
+    "step0": {
+      "cos_like": 0.2,
+      "sin_like": 0.2,
+      "Tx": 0.3,
+      "Ty": 0.3,
+      "Tz": 0.2,
+      "Cx": 0.3,
+      "Cy": 0.3
+    }
+  },
+  "mh": {
+    "enabled": true,
+    "walkers": 1,
+    "n_hops": 10,
+    "ke_start_kj": 2.0,
+    "ke_ref_kj": 2.0,
+    "ke_min_kj": 0.2,
+    "ke_max_kj": 40.0,
+    "alpha_down": 0.9,
+    "beta_up": 1.15,
+    "tacc_start_kj": 3.0,
+    "tacc_min_kj": 0.2,
+    "tacc_max_kj": 30.0,
+    "adapt_T_every": 20,
+    "seed": 6103
+  },
+  "distinct": {
+    "rmsd_A": 0.15,
+    "energy_eps": 0.0005,
+    "keep_top_k": 20
+  },
+  "base_step_scales": {
+    "cos_like": 0.25,
+    "sin_like": 0.25,
+    "Tx": 0.35,
+    "Ty": 0.35,
+    "Tz": 0.25,
+    "Cx": 0.35,
+    "Cy": 0.35
+  },
+  "min_step_scales": {
+    "cos_like": 0.05,
+    "sin_like": 0.05,
+    "Tx": 0.1,
+    "Ty": 0.1,
+    "Tz": 0.1,
+    "Cx": 0.1,
+    "Cy": 0.1
+  },
+  "max_step_scales": {
+    "cos_like": 1.0,
+    "sin_like": 1.0,
+    "Tx": 1.0,
+    "Ty": 1.0,
+    "Tz": 1.0,
+    "Cx": 1.0,
+    "Cy": 1.0
+  }
+}

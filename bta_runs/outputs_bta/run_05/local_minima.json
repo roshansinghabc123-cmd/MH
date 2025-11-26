@@ -1,0 +1,38 @@
+[
+  {
+    "rank": 1,
+    "objective_kjmol": -146.94358919104948,
+    "angle_degrees": -61.707892936628696,
+    "params": {
+      "cos_like": 0.47396691198592833,
+      "sin_like": -0.8805426544708232,
+      "Tx": 0.2625193115078021,
+      "Ty": 0.033520270646686015,
+      "Tz": 3.364015465406167,
+      "Cx": 3.0,
+      "Cy": -3.0
+    },
+    "xyz_file": "mh_localmin_01_3layers.xyz",
+    "engine_used": "xtb",
+    "xtb_method": "GFN2-xTB",
+    "method": "minima-hopping"
+  },
+  {
+    "rank": 2,
+    "objective_kjmol": -145.24741219256268,
+    "angle_degrees": -62.91131620536543,
+    "params": {
+      "cos_like": 0.17408958332025273,
+      "sin_like": -0.34036662642332327,
+      "Tx": 0.2412190727311162,
+      "Ty": -0.07254353370123218,
+      "Tz": 3.2993032568549228,
+      "Cx": 3.0,
+      "Cy": -2.925137030421566
+    },
+    "xyz_file": "mh_localmin_02_3layers.xyz",
+    "engine_used": "xtb",
+    "xtb_method": "GFN2-xTB",
+    "method": "minima-hopping"
+  }
+]

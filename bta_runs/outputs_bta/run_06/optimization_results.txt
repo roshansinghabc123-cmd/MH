@@ -1,0 +1,12 @@
+OPTIMIZATION RESULTS
+cos_like: 0.473955281831
+sin_like: -0.880548914499
+Tx: 0.261434367970
+Ty: 0.034549972822
+Tz: 3.364505643681
+Cx: 1.498979258254
+Cy: 0.827044859837
+angle_degrees: -61.708650
+best_objective_kjmol: -146.943670
+engine_used: xtb
+xtb_method: GFN2-xTB
